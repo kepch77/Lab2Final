@@ -32,9 +32,9 @@ export class RegistrationComponent implements OnInit {
   countries: string[] = ['Guatemala', 'Mexico', 'Estados Unidos'];
   constructor() {
     // Add default registration data.
-    this.registrations.push(new Registration('Johan', 'Peter', {year: 1980, month: 5, day: 12}, 'johan', 'johan123', 'UK'));
-    this.registrations.push(new Registration('Mohamed', 'Tariq', {year: 1975, month: 12, day: 3}, 'tariq', 'tariq123', 'UAE'));
-    this.registrations.push(new Registration('Nirmal', 'Kumar', {year: 1970, month: 7, day: 25}, 'nirmal', 'nirmal123', 'India'));
+    this.registrations.push(new Registration('Johan', 'Peter', {year: 1980, month: 5, day: 12}, 'johan', 'johan123', 'Guatemala'));
+    this.registrations.push(new Registration('Mohamed', 'Tariq', {year: 1975, month: 12, day: 3}, 'tariq', 'tariq123', 'Estados Unidos'));
+    this.registrations.push(new Registration('Nirmal', 'Kumar', {year: 1970, month: 7, day: 25}, 'nirmal', 'nirmal123', 'Mexico'));
   }
 
   ngOnInit() {}
