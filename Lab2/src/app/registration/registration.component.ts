@@ -39,64 +39,6 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {}
 
-  // This method associate to New Button.
-  onNew() {
-    // Initiate new registration.
-    this.regModel = new Registration();
-    // Change submitType to 'Save'.
-    this.submitType = 'Guardar';
-    // display registration entry section.
-    this.showNew = true;
-  }
-
-  // This method associate to Save Button.
-  onSave() {
-    if (this.submitType === 'Guardar') {
-      // Push registration model object into registration list.
-      this.registrations.push(this.regModel);
-    } else {
-      // Update the existing properties values based on model.
-      this.registrations[this.selectedRow].firstName = this.regModel.firstName;
-      this.registrations[this.selectedRow].lastName = this.regModel.lastName;
-      this.registrations[this.selectedRow].dob = this.regModel.dob;
-      this.registrations[this.selectedRow].user = this.regModel.user;
-      this.registrations[this.selectedRow].password = this.regModel.password;
-      this.registrations[this.selectedRow].country = this.regModel.country;
-    }
-    // Hide registration entry section.
-    this.showNew = false;
-  }
-
-  // This method associate to Edit Button.
-  onEdit(index: number) {
-    // Assign selected table row index.
-    this.selectedRow = index;
-    // Initiate new registration.
-    this.regModel = new Registration();
-    // Retrieve selected registration from list and assign to model.
-    this.regModel = Object.assign({}, this.registrations[this.selectedRow]);
-    // Change submitType to Update.
-    this.submitType = 'Guardar';
-    // Display registration entry section.
-    this.showNew = true;
-  }
-
-  // This method associate to Delete Button.
-  onDelete(index: number) {
-    // Delete the corresponding registration entry from the list.
-    this.registrations.splice(index, 1);
-  }
-
-  // This method associate toCancel Button.
-  onCancel() {
-    // Hide registration entry section.
-    this.showNew = false;
-  }
-
-  // This method associate to Bootstrap dropdown selection change.
-  onChangeCountry(country: string) {
-    // Assign corresponding selected country to model.
-    this.regModel.country = country;
-  }
+  
 
 }
