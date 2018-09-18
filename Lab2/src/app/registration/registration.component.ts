@@ -38,7 +38,28 @@ export class RegistrationComponent implements OnInit {
   }
 
   ngOnInit() {}
+// This method associate to New Button.
+  onNew() {
+    // Initiate new registration.
+    this.regModel = new Registration();
+    // Change submitType to 'Save'.
+    this.submitType = 'Guardar';
+    // display registration entry section.
+    this.showNew = true;
+  }
 
-  
+  // This method associate to Edit Button.
+  onEdit(index: number) {
+    // Assign selected table row index.
+    this.selectedRow = index;
+    // Initiate new registration.
+    this.regModel = new Registration();
+    // Retrieve selected registration from list and assign to model.
+    this.regModel = Object.assign({}, this.registrations[this.selectedRow]);
+    // Change submitType to Update.
+    this.submitType = 'Guardar';
+    // Display registration entry section.
+    this.showNew = true;
+  } 
 
 }
